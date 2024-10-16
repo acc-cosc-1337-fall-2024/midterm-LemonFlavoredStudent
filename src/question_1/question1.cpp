@@ -17,8 +17,27 @@ string get_factorial_sequence(int num)
         for (int i = 1; i <= num; ++i)
         {
             factorial *= i;
-            str1 << num;
-            factorialString += str1.str();
+            str1.str("");
+            str1.clear();
+            str1 << i;
+
+            if (i < num)
+            {
+                factorialString += (str1.str() + "x");
+            }
+            else 
+            {
+                factorialString += (str1.str() + "=");
+            }
         }
+        str1.str("");
+        str1.clear();
+        str1 << factorial;
+        factorialString += str1.str();
     }
+    else
+    {
+        factorialString = "Value out of expected range.";
+    }
+    return factorialString;
 }

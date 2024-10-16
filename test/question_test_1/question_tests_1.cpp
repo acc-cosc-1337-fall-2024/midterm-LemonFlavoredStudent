@@ -10,3 +10,8 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("Verify get_factorial_sequence function")
+{
+	REQUIRE(get_factorial_sequence(5) == "1x2x3x4x5=120");
+}
